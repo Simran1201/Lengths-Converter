@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Convert Length</title>
+</head>
+<body>
+    <div class="card">
+        <h1>Length Converter</h1>
+        <form class="row">
+            <div class="value">
+                <label for="feet" class="lab">Feet</label>
+                <input type="number" id="feet" class="all feet" placeholder="Feet" oninput="feets(this.value)" onchange="feets(this.value)">
+            </div>
+            <div class="value">
+                <label for="meters" class="lab">Meters</label>
+                <input type="number" id="meters" class="all Meters" placeholder="Meters" oninput="meter(this.value)" onchange="meter(this.value)">
+            </div>
+            <div class="value">
+                <label for="inches" class="lab">Inches</label>
+                <input type="number" id="inches" class="all Inches" placeholder="Inches" oninput="inc(this.value)" onchange="inc(this.value)">
+            </div>
+            <div class="value">
+                <label for="cm" class="lab">CentiMeter</label>
+                <input type="number" id="cm" class="all cm" placeholder="CentiMeters" oninput="cem(this.value)" onchange="cem(this.value)">
+            </div>
+            <div class="value">
+                <label for="yards" class="lab">Yards</label>
+                <input type="number" id="yards" class="all Yards" placeholder="Yards" oninput="yar(this.value)" onchange="yar(this.value)">
+            </div>
+            <div class="value">
+                <label for="km" class="lab">Kilometer</label>
+                <input type="number" id="km" class="all km" placeholder="Kilometer" oninput="kem(this.value)" onchange="kem(this.value)">
+            </div>
+            <div class="value">
+                <label for="miles" class="lab">Miles</label>
+                <input type="number" id="miles" class="all Miles" placeholder="Miles" oninput="mile(this.value)" onchange="mile(this.value)">
+            </div>
+            <div class="button">                
+                <input type="reset" class="btn" >
+            </div>
+        </form>
+    </div>
+    <script>
+        function feets(n){
+            document.getElementById("meters").value =  n / 3.2808;
+            document.getElementById("inches").value =  n * 12;
+            document.getElementById("cm").value =  n /0.032808;
+            document.getElementById("km").value =  n / 3280.8;
+            document.getElementById("yards").value =  n /0.33333;
+            document.getElementById("miles").value =  n * 0.00018939;
+        }
+        function meter(n){
+            document.getElementById("feet").value =  n *3.2808;
+            document.getElementById("inches").value =  n *39.370;
+            document.getElementById("cm").value =  n /0.01;
+            document.getElementById("km").value =  n /1000;
+            document.getElementById("yards").value =  n *1.0936;
+            document.getElementById("miles").value =  n *0.00062137;
+        }
+        function inc(n){
+            document.getElementById("feet").value =  n *0.083333;
+            document.getElementById("meters").value =  n /39.370;
+            document.getElementById("cm").value =  n /0.39370;
+            document.getElementById("km").value =  n /39370;
+            document.getElementById("yards").value =  n *0.027778;
+            document.getElementById("miles").value =  n *0.000015783;
+        }
+        function cem(n){
+            document.getElementById("feet").value =  n *0.032808;
+            document.getElementById("meters").value =  n /100;
+            document.getElementById("inches").value =  n *0.39370;
+            document.getElementById("km").value =  n /100000;
+            document.getElementById("yards").value =  n *0.010936;
+            document.getElementById("miles").value =  n *0.0000062137;
+        }
+        function kem(n){
+            document.getElementById("feet").value =  n *3280.8;
+            document.getElementById("meters").value =  n *1000;
+            document.getElementById("cm").value =  n *100000;
+            document.getElementById("yards").value =  n *1093.6;
+            document.getElementById("inches").value =  n *39370;
+            document.getElementById("miles").value =  n *0.62137;
+        }
+        function yar(n){
+            document.getElementById("feet").value =  n *3;
+            document.getElementById("meters").value =  n /1.0936;
+            document.getElementById("cm").value =  n /0.010936;
+            document.getElementById("km").value =  n /1093.6;
+            document.getElementById("inches").value =  n *36;
+            document.getElementById("miles").value =  n *0.00056818;
+        }
+        function mile(n){
+            document.getElementById("feet").value =  n *5280;
+            document.getElementById("meters").value =  n /0.00062137;
+            document.getElementById("cm").value =  n /0.0000062137;
+            document.getElementById("km").value =  n /0.62137;
+            document.getElementById("yards").value =  n *1760;
+            document.getElementById("inches").value =  n *63360;
+        }
+    </script>
+</body>
+</html>
